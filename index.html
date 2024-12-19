@@ -1,0 +1,440 @@
+    <!DOCTYPE html>
+    <html lang="ko">
+
+    <head>
+        <meta charset="UTF-8">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+        <title> Music </title>
+        <!-- rel="preconnect" - html에게 특정 도메인에 연결하라는 HTML태그임 -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- crossorigin : 스크립트를 익명으로 가져옴 
+        인증정보 전송하지 못하도록 차단하는 역할을 함  
+        보안상의 이유로 들어감      link, script, img, video, audio  -->
+
+        <!-- rel="stylesheet":css 형식임을 나타냄 -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Titillium+Web:wght@200;300;400;700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+        <!-- font-awesome 공식사이트 - https://fontawesome.com/ -->
+        <!-- rel="stylesheet":css 형식임을 나타냄 -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&display=swap">
+        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.0/css/all.css">
+        <!-- 나눔스퀘어 -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-nanum@1.0.0/nanumsquare.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <!-- slick.css => css import 로 부르면 나오지 않음 -->
+        <!-- slic -->
+        <link rel="stylesheet" href="./css/slick.css">
+        <link rel="stylesheet" href="./css/slick-theme.css">
+        <script src="./js/jquery-1.11.3.min.js"></script>
+        <script src="./js/jquery.slicknav.js"></script>
+        <script src="./js/picMain.js"></script>
+        <!-- news room slick -->
+        <script src="./js/slick.1.9.0.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+        <script>
+            // ====== wow.js
+            new WOW().init();
+
+            // ====== 나눔스퀘어
+            WebFont.load({
+                google: {
+                    families: ['Nanum Square:regular,bold']
+                }
+            });
+        </script>
+    </head>
+
+    <body>
+        <!-- #wrap>header>.innerHeader -->
+        <div id="wrap">
+            <!-- =================================
+                header 
+            ====================================-->
+            <header>
+                <div class="headerBar">
+                    <div class="innerHeader">
+    
+                        <!-- pcmenu -->
+                        <!-- nav.nav>.inner>ul#menu.nav-list>li.in_menu0$*5>a -->
+                        <nav class="nav">
+                            <div class="inner">
+                                <ul id="menu" class="nav-list">
+                                    <li class="in_menu01">
+                                        <a href="#">
+                                            About
+                                        </a>
+                                        <!-- ul.submenu>li*5>a{sub$} -->
+                                        <ul class="submenu">
+                                            <li><a href="#">About us</a></li>
+                                            <li><a href="#">How</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="in_menu02">
+                                        <a href="#">Music</a>
+                                        <!-- sub -->
+                                        <ul class="submenu">
+                                            <li><a href="#">Happy</a></li>
+                                            <li><a href="#">Sad</a></li>
+                                            <li><a href="#">Love</a></li>
+                                            <li><a href="#">Angry</a></li>
+                                            <li><a href="#">Others</a></li>
+                                        </ul>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </nav>
+                        <!-- pc search,lang -->
+                        <!-- ul.searchLang>li*3>a -->
+                        <ul class="searchLang">
+                            <li><a href="#">
+                                    <i class="fa-regular fa-magnifying-glass"></i>
+                                    <!-- <img src="./images/icon_search_w.svg" alt="검색버튼"> -->
+                                </a></li>
+                            <li><a href="#">KO</a></li>
+                            <li><a href="#">EN</a></li>
+                        </ul>
+                        <!-- mobile search, toggle -->
+                        <!-- ul.searchToggle>li*2>a>img -->
+                        <ul class="searchToggle">
+                            <li><a href="#"><img src="./images/icon_search_w.svg" alt="검색버튼"></a></li>
+                            <li><a href="#"><img src="./images/toggle-right.svg" alt="햄버거버튼"></a></li>
+                        </ul>
+                    </div>
+                    <!-- pc sub menu bg -->
+                    <div class="smenu_bar"></div>
+                </div>
+            </header>
+            <!-- =================================
+                main - 전체 콘텐츠 영역 
+            ====================================-->
+            <!-- main>section.products>h2{products} -->
+            <main>
+                <!-- 메인슬라이드 -->
+                <section class="main_visual">
+                    <h2 class="blind">main_visual</h2>
+                    <!-- .swiper.mySwiper -->
+                    <!-- 슬라이드, 인디케이터, 이전다음버튼  -->
+                    <div class="swiper mySwiper">
+
+                        <!-- 스와이퍼 슬라이드 -->
+                        <!-- .swiper-wrapper -->
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <!-- p.sm+p.bigText -->
+                                <p class="sm wow animate__flipOutY">Music can change the world </p>
+                                <p class="bigText wow animate__flipOutY">
+                                    음악이 세상을 바꿉니다.</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <p class="sm">삶의 질을 높이는 </p>
+                                <p class="bigText"> Music
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <p class="sm">음악과 함께라면</p>
+                                <p class="bigText">당신의 삶이</p>
+                            </div>
+                        </div>
+
+                        <!-- 인디케이터 -->
+                        <div class="swiper-pagination slides-pagenation"></div>
+
+                        <!-- 이전,다음버튼 -->
+                        <!-- .swiper-button-prev -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+
+                </section>
+                <section class="products ">
+                    <h2>Emotion <span></span></h2>
+                    <p>당신의 감정에 맞는 음악추천</p>
+                    <!-- 아코디언 -->
+                    <!-- .pd_list>.option.active -->
+                    <div class="pd_list showBox">
+                        <!-- 1 -->
+                        <div class="option active"
+                            style="--optionBackground:url(../images/happy.jpg)no-repeat;">
+                            <div class="img"></div>
+                            <p>Happy</p>
+                            <span>Happy emotional music</span>
+                            <img src="./images/w-arrow.svg" class="wArrow" alt="화살표">
+                            <div class="bg"></div>
+                        </div>
+                        <!-- 2 -->
+                        <div class="option" style="--optionBackground:url(../images/sad.jpg)no-repeat;">
+                            <div class="img"></div>
+                            <p>Sad</p>
+                            <span>Sad emotional music</span>
+                            <img src="./images/w-arrow.svg" class="wArrow" alt="화살표">
+                            <div class="bg"></div>
+                        </div>
+                        <!-- 3 -->
+                        <div class="option" style="--optionBackground:url(../images/love.jpg)no-repeat;">
+                            <div class="img"></div>
+                            <p>Love</p>
+                            <span>Love music</span>
+                            <img src="./images/w-arrow.svg" class="wArrow" alt="화살표">
+                            <div class="bg"></div>
+                        </div>
+                        <!-- 4 -->
+                        <div class="option" style="--optionBackground:url(../images/angry.jpg)no-repeat;">
+                            <div class="img"></div>
+                            <p>Angry</p>
+                            <span>Decrease your angry emotion</span>
+                            <img src="./images/w-arrow.svg" class="wArrow" alt="화살표">
+                            <div class="bg"></div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="newsRoom">
+                    <h2>News <span></span></h2>
+                    <p> 음악에 대한 뉴스</p>
+
+                    <!-- slick news -->
+                    <!-- .bbs>.inner>.inner_bbs>.tab_btn>ul>li.active -->
+                    <div class="bbs">
+                        <div class="inner">
+                            <div class="inner_bbs">
+                                <div class="tab_btn">
+                                    <ul>
+                                        <li class="active">전체</li>
+                                        <li>최신뉴스</li>
+                                        <li>추천음악</li>
+
+                                    </ul>
+                                </div>
+                                <!-- .tabs>.tab.active>.slider>.item -->
+                                <div class="tabs">
+                                    <!-- tab menu  1 -->
+                                    <div class="tab active">
+                                        <div class="slider showBox">
+                                            <!-- 1 -->
+                                            <div class="item">
+                                                <!-- .inner_item>.title>h3+span -->
+                                                <div class="inner_item">
+                                                    <div class="title">
+                                                        <h3>* 음악이 감정을 강렬하게 자극하는 이유</h3>
+                                                        <span> 등록 2024-04-05</span>
+                                                    </div>
+                                                    <!-- 기사 -->
+                                                    <h4>음악이 감정을 강렬하게 자극하는 이유</h4>
+                                                    <p>음악을 들으면 마음이 안정될 때도 슬퍼질 때도 있다. 
+                                                        때로는 흥분되고 불안해지기도 한다. 
+                                                        과학자들이 이처럼 음악이 강렬한 감정 자극을 일으키는 이유를 
+                                                        밝히기 위해 진행한 ‘신체 지도화’ 결과가 공개됐다. 
+                                                        음악이 심장을 포함한 신체 감각에 영향을 미쳐 
+                                                        감정을 이끌어낸다는 것이다. 
+                                                        다이코쿠 다쓰야 일본 도쿄대 정보과학기술대학원 교수 연구팀은 
+                                                        음악 화음이 신체 감각을 자극하고 이를 기반으로 특정한 감정이 
+                                                        촉발된다는 연구결과를 4일(현지시간) 국제학술지 ‘i사이언스’에 
+                                                        발표했다. 
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <!-- // item -->
+
+                                            <!-- 2 -->
+                                            <div class="item">
+                                                <!-- .inner_item>.title>h3+span -->
+                                                <div class="inner_item">
+                                                    <div class="title">
+                                                        <h3>* 음악치료: 음악이 수술 전 환자를 안정시키는데 진정 효과 증명
+                                                        </h3>
+                                                        <span> 등록 2024-07-30</span>
+                                                    </div>
+                                                    <!-- 기사 -->
+                                                    <h4>수술 전 편안한 음악을 들으면 약물을 사용하는 것만큼이나 환자를 진정하는 효과가 있다는 연구 결과가 나왔다.</h4>
+                                                    <p>불안, 혈압, 심박수를 낮출 목적으로 음악을 사용한 결과 157명이 참여한 실험에서 신경안정제와 동일한 효과를 보였다고 연구진을 밝혔다.
+                                                        환자들은 자신이 직접 음악을 선곡하는 것을 선호했다.
+                                                        펜실베니아 대학의 이번 연구 결과는 BMJ 저널에 실렸으며, 
+                                                        연구자들은 음악 장르 혹은 재생 방법 등이 결과에 영향을 미치는지에 관해 계속 연구하고 싶다고 밝혔다.
+                                                        이번 실험에서는 환자가 국소 마취를 받는 동안 미다졸람을 투여하거나 
+                                                        영국 출신의 밴드 마르코니 유니온의 '웨이트리스(Weightless)'을 3분 동안 들려주었다. 
+                                                        두 그룹 모두에서 동일한 수치로 불안이 감소했다.
+                                                        수술 전 불안감은 신체에 스트레스 호르몬을 분비시켜 환자의 회복에 영향을 미칠 수 있다.</p>
+                                                </div>
+                                            </div>
+                                            <!-- // item -->
+                                            <!-- 3 -->
+                                            <div class="item">
+                                                <!-- .inner_item>.title>h3+span -->
+                                                <div class="inner_item">
+                                                    <div class="title">
+                                                        <h3>* 지친 마음 감싸안는 음악 한 소절
+                                                        </h3>
+                                                        <span> 등록 2024-01-11</span>
+                                                    </div>
+                                                    <!-- 기사 -->
+                                                    <h4>음악이 심리치료의 매개체가 된다는 과학적 근거가 궁금하다</h4>
+                                                    <p>인간은 음악적 존재다. 생물학적 리듬을 가지고 태어나기 때문이다. 
+                                                        심박, 말의 템포, 보행 속도 같은 변인은 리듬이고, 목소리와 같이 음고가 있는 것은 선율이다. 
+                                                        우리 안의 이런 요소는 음악을 만나면 그 자극에 동조화(Entrainment)된다. 
+                                                        예를 들어 빠른 템포의 음악을 들을 때는 심장박동이 증가하거나 나도 모르게 몸을 흔들게 되지만, 
+                                                        느린 음악을 들을 때는 반대의 효과가 일어난다. 맥박, 피부 온도, 혈압, 뇌파 등 
+                                                        우리 안의 리듬은 모두 측정할 수 있고, 이런 지표들은 음악이 인간의 몸을 조율한다는 근거가 된다. 
+                                                        음악이라는 자극으로 몸 안에서 어떤 일이 일어나는지를 충분히 입증할 수 있는 만큼 과학적이라고 할 수 있다.
+
+                                                        출처 : 덴 매거진(https://www.theden.co.kr)
+                                                        
+ </p>
+                                                </div>
+                                            </div>
+                                            <!-- // item -->
+                                            <!-- 4 -->
+                                            <div class="item">
+                                                <!-- .inner_item>.title>h3+span -->
+                                                <div class="inner_item">
+                                                    <div class="title">
+                                                        <h3>*코로나 블루, 좋은 음악을 들으며 이겨내요
+                                                        </h3>
+                                                        <span> 등록 2024-01-15</span>
+                                                    </div>
+                                                    <!-- 기사 -->
+                                                    <h4>코로나 블루, 좋은 음악을 들으며 이겨내요</h4>
+                                                    <p>음악이 주는 효과, 어디까지 경험해 보셨나요? 
+                                                        음악이 몸이 느끼는 고통까지 덜어준다는 연구 결과가 나왔는데요. 사람뿐만이 아니라, 고양이에게도 음악은, 진통제 효과를 발휘한다고 합니다.
+병원에 가기 전, 준비해야 할 것이 있습니다. 바로 좋아하는 음악이죠. 영국의 연구팀은 7,000명의 환자를 대상으로 음악의 진통제 효과를 연구했습니다. 수술 전후, 고통을 느끼는 환자들에게 음악을 들려준 겁니다. 
+그러자, 0에서 10까지 측정되는 환자의 고통지수가 2단계나 줄어들었죠. 결국, 음악 덕에, 진통제 사용을 줄일 수 있었습니다.
+그런데, 특별히 더 진통효과를 높인 음악이 있었을까요? 연구진이 밝힌 바로는, 음악의 장르에 상관없이 모든 음악이 동일한 진통제 효과를 발휘했다고 합니다.
+그러나, 고양이에겐 음악의 장르가 중요할 수 있습니다. 포르투갈의 연구진은 마취된 고양이에게 2분간 여러 종류의 소리를 들려주었습니다. 첫 번째는 아무것도 안 들리는 침묵의 소리였죠. 두 번째는 현악기로 연주된 조용한 클래식 음악. 세 번째는 팝음악. 그리고 네 번째 들려준 소리는 강렬한 록음악이었습니다. 그리고, 각각의 소리를 듣고 있는 고양이의 호흡을 측정. 어떤 소리가, 고양이에게 심리적인 안정감을 주는지 알아보았죠. 결과는 어땠을까요?
+고양이에게 진정효과를 준 건, 조용한 클래식 음악이었습니다. 반면 강렬한 록음악은, 침묵과 맞먹는 긴장상태를 가져다주었죠.
+음악의 진통제 효과는, 운동을 할 때도 발휘됩니다. 음악을 들으면서 운동을 하면, 뇌에선 쾌락과 관계된 도파민과 통증을 억제하는 신경전달 물질인 ‘오피오이드’의 분비를 촉진시킨다고 합니다. 운동을 하면서 느끼는 신체적 고통이 줄어들면 목표를 달성하기가 더 쉬워지겠죠.
+이제 진통제를 복용하기 전, 좋아하는 음악을 먼저 떠올려 보시면 어떨까요? 
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <!-- // item -->
+                                        </div>
+                                    </div>
+                                    <!-- // tab -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 하단화살표 -->
+                <!-- a.btnTop>img -->
+                <a href="#" class="btnTop"><img src="./images/top-arrow.svg" alt="최상단 이동 화살표"></a>
+            </main>
+            <!-- =================================
+                footer 
+            ====================================-->
+            <!-- footer>.innerFooter>ul.bmenu>li*6>a -->
+            <footer>
+                <div class="innerFooter">
+                    <!-- 하단메뉴 -->
+                    <ul class="bmenu">
+                        <li><a href="#">About
+                            </a>
+                            <!-- ul.list>li*6>a{name} -->
+                            <ul class="list">
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">How</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Music
+                            </a>
+                            <ul class="list">
+                                <li><a href="#">Happy</a></li>
+                                <li><a href="#">Sad</a></li>
+                                <li><a href="#">Love</a></li>
+                                <li><a href="#">Angry</a></li>
+                                <li><a href="#">Others</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Corporation
+                            </a>
+                            <ul class="list">
+                                <li><a href="#">Naver</a></li>
+                                <li><a href="#">Youtube</a></li>
+                                <li><a href="#">Google</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Communication</a>
+                            <ul class="list">
+                                <li><a href="#">Contact us</a></li>
+                            </ul>
+                        </li>
+
+
+
+                    </ul>
+                    <!-- 관련사이트+copyright -->
+                    <!-- .fmCopy>select>option*6 -->
+                    <div class="fmCopy">
+
+                        <!-- <select name="" id="">  -->
+                        <select id="familySites" onchange="Site()">
+                            <!-- option value - 서버로 전송되는 값 넣기 -->
+                            <option value="#">패밀리 사이트</option>
+                            <option value="YM">Youtube music</option>
+                            <option value="N">Naver</option>
+                            <option value="G">Google</option>
+                        </select>
+                        <!-- copyright -->
+                        <div class="copyright">
+                            <p>
+                                &copy; 2024 KTNU
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- Swiper 라이브러리 스크립트를 불러오기 -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <script>
+            // swiper slide plugin
+            // .mySwiper 에 슬라이드 적용
+            var swiper = new Swiper(".mySwiper", {
+                // 이전 다음버튼 사용하여 슬라이드 전환
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                // 인디케이터
+                pagination: {
+                    el: ".swiper-pagination", // 표시할 요소 선택자
+                    clickable: true, // 버튼 클릭시 슬라이드 이동하도록 설정
+                },
+            });
+
+
+
+
+// =============등장액션: .showBox
+            const showBox = document.querySelectorAll(".showBox");
+            // 화면높이값 2/3 구하기
+            const screenH = window.innerHeight / 3 * 2;
+            // 현재 요소의 위치 (화면의 상단으로부터의 거리)를 반환하는 함수
+            const retVal = ele => ele.getBoundingClientRect().top;
+            //   등장 액션을 처리하는 함수
+            const showTit = x => {
+                // 현재 요소의 위치 (화면의 상단으로부터의 거리)를 가져옴
+                let xval = retVal(x);
+                // 만약 요소가 화면에 나타나는 중이라면
+                if (xval < screenH && xval > 0) {
+                    // 요소가 화면에 나타날 때 opacity를 1로 변경하여 나타냄
+                    x.classList.add("on");
+                }
+            };
+            window.addEventListener("scroll", () => {
+                // 스크롤 등장요소 개수만큼 for문 돌리기
+                for (let x of showBox) showTit(x);
+            });
+        </script>
+    </body>
+
+    </html>
